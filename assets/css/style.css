@@ -1,0 +1,186 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4e54c8;
+    --secondary-color: #8f94fb;
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, var(--bg-color) 0%, #e0eafc 100%);
+    background-attachment: fixed;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Auth Pages Styling */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+}
+
+.auth-card h2 {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Dashboard Styling */
+.navbar {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color)) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+}
+
+.main-container {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.custom-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.custom-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.custom-card .card-header {
+    background: rgba(78, 84, 200, 0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 20px;
+}
+
+.custom-card .card-body {
+    padding: 25px;
+}
+
+/* Quiz Specific */
+.question-block {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    border-left: 5px solid var(--primary-color);
+}
+
+.question-block h5 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.option-label {
+    display: block;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+
+.option-label:hover {
+    background: #eef0f8;
+    border-color: var(--secondary-color);
+}
+
+.option-input:checked + .option-label {
+    background: rgba(78, 84, 200, 0.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Result Review styling */
+.review-block {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.review-correct {
+    border-left: 5px solid var(--success-color);
+}
+
+.review-wrong {
+    border-left: 5px solid var(--danger-color);
+}
+
+.badge-custom {
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(78, 84, 200, 0.4);
+    color: white;
+}
+
+/* Input Fields */
+.form-control {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(78, 84, 200, 0.25);
+}
